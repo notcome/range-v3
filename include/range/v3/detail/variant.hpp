@@ -407,7 +407,8 @@ namespace ranges
                 template<typename U, std::size_t M>
                 [[noreturn]] meta::if_c<M != N> operator()(indexed_element<U, M>) const
                 {
-                    throw bad_variant_access("bad variant access");
+                    fprintf(stderr, "bad variant access");
+                    exit(-1);
                 }
                 template<typename U>
                 void operator()(indexed_element<U, N> t) const

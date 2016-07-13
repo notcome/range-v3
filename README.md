@@ -1,3 +1,11 @@
+range-v3 fork
+=============
+
+This fork makes range-v3 exception and RTTI free. Exceptions are replaced by
+old-fashioned error messages with `exit(-1)`; RTTI are only used in the random
+generator (access hash code based on class name), so related sources are simply
+removed.
+
 range-v3
 ========
 
@@ -27,7 +35,7 @@ Other resources (mind the dates, the library probably has changed since then):
 - Design / Implementation:
   - Rationale behind range-v3: [N4128: Ranges for the standard library Revision 1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4128.html), 2014.
   - Ranges TS: [N4560: C++ Extensions for Ranges](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4560.pdf), 2015.
-  - Implementation of customization points in range-v3: 
+  - Implementation of customization points in range-v3:
     - [N4381: Suggested Design for Customization Points](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4381.html), 2015.
     - [P0386: Inline variables](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r0.pdf), 2016.
     - [Customization Point Design in C++11 and Beyond](http://ericniebler.com/2014/10/21/customization-point-design-in-c11-and-beyond/), 2014.
